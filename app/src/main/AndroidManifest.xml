@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WorkoutLog">
         <activity
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomepageActivity"
             android:exported="false" />
         <activity

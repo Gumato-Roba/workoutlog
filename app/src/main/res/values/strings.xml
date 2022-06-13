@@ -5,4 +5,15 @@
     <string name="profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_email">Your email</string>
+    <string name="your_password">Your Password</string>
+    <string name="login">Login</string>
+    <string name="signup">Don\'t have an account?<u>Sign up</u></string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="Login">Already have an account? <u>Login</u></string>
+    <string name="password">Password</string>
 </resources>
