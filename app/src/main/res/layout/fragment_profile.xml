@@ -10,12 +10,9 @@
         android:id="@+id/fcvprofile"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="PROFILEFRAGMENT" />
+        android:text="PROFILE FRAGMENT" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="dev.gumato.workoutlog.ProfileFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+
 
 </FrameLayout>
