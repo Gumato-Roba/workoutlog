@@ -24,8 +24,6 @@ class SignupActivity : AppCompatActivity() {
 
     }
     fun castView(){
-
-
         binding.btnSignup.setOnClickListener {
             validateSignup()
         }
