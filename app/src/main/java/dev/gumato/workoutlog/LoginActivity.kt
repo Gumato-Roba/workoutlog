@@ -7,49 +7,39 @@ import android.widget.Button
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import dev.gumato.workoutlog.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
-    lateinit var tilEmail: TextInputLayout
-    lateinit var etEmail: TextInputEditText
-    lateinit var tilPassword: TextInputLayout
-    lateinit var etPassword: TextInputEditText
-    lateinit var btnLogin: Button
-    lateinit var tvSignup: TextView
+   lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding= ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         castView()
-        tvSignup.setOnClickListener {
-            val intent=Intent(this,SignupActivity::class.java)
+        binding.tvSignup.setOnClickListener {
+            val intent=Intent(this,HomepageActivity::class.java)
             startActivity(intent)
         }
     }
 
     fun castView() {
-        tilEmail = findViewById(R.id.tilEmail)
-        etEmail = findViewById(R.id.etEmail)
-        tilPassword = findViewById(R.id.tilEmail2)
-        etPassword = findViewById(R.id.etEmail2)
-        btnLogin = findViewById(R.id.btnLogin)
-        tvSignup = findViewById(R.id.tvSignup)
-
-        btnLogin.setOnClickListener {
+        binding.btnLogin.setOnClickListener {
             validateLogin() }
     }
 
     fun validateLogin() {
         var error = false
 
-        tilEmail.error = null
-        tilPassword.error = null
-        var email = etEmail.text.toString()
+        binding.tilEmail.error = null
+        binding.tilPassword.error = null
+        var email = binding.etEmail.text.toString()
         if (email.isBlank()) {
-            tilEmail.error = "Enter your email"
+            binding.tilEmail.error = "Enter your email"
 
         }
-        var password = etPassword.text.toString()
+        var password = binding.etPassword.text.toString()
         if (password.isBlank()) {
-            tilPassword.error = "Enter your password"
+            binding.etPassword.error = "Enter your password"
         }
         if (!error) {
             var intent=Intent(this,HomepageActivity::class.java)
